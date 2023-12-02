@@ -12,11 +12,13 @@ export const CREATE_TEAM = 'CREATE_TEAM';
 export const FETCH_ALL_TEAMS = 'FETCH_ALL_TEAMS';
 export const FETCH_TEAM_DETAILS = 'FETCH_TEAM_DETAILS';
 
-
+const api = axios.create({
+  baseURL: 'https://tame-pink-chimpanzee-slip.cyclic.app/api',
+});
 // Action creators
 export const fetchUsers = (filters) => async (dispatch) => {
   try {
-    const response = await axios.get('api/users', {
+    const response = await api.get('api/users', {
       params: filters,
     });
 
@@ -52,7 +54,7 @@ export const selectUser = (userId) => ({
 
 export const createTeam = (teamName, selectedUser) => async (dispatch) => {
   try {
-    const response = await axios.post('api/teams', { name: teamName, members: selectedUser});
+    const response = await api.post('api/teams', { name: teamName, members: selectedUser});
     dispatch({
       type: CREATE_TEAM,
       payload: response.data,
@@ -65,7 +67,7 @@ export const createTeam = (teamName, selectedUser) => async (dispatch) => {
 
 export const fetchAllTeams = () => async (dispatch) => {
   try {
-    const response = await axios.get('api/teams');
+    const response = await api.get('api/teams');
     dispatch({
       type: FETCH_ALL_TEAMS,
       payload: response.data,
@@ -77,7 +79,7 @@ export const fetchAllTeams = () => async (dispatch) => {
 
 export const fetchTeamDetails = (teamId) => async (dispatch) => {
   try {
-    const response = await axios.get('api/teams/'+teamId);
+    const response = await api.get('api/teams/'+teamId);
     
     dispatch({
       type: FETCH_TEAM_DETAILS,

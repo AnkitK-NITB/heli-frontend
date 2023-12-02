@@ -8,16 +8,17 @@ import FilterOptions from './components/FilterOptions';
 import TeamCreation from './components/TeamCreation';
 import TeamDetails from './components/TeamDetails';
 import { Grid } from '@mui/material';
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
 const App = () => {
   return (
-    <Router>
+    <BrowserRouter basename='/heli-frontend'>
       <div>
         <Switch>
           <Route path="/" exact component={HomePage} />
         </Switch>
       </div>
-    </Router>
+    </BrowserRouter>
   );
 };
 
