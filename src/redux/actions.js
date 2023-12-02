@@ -13,7 +13,7 @@ export const FETCH_ALL_TEAMS = 'FETCH_ALL_TEAMS';
 export const FETCH_TEAM_DETAILS = 'FETCH_TEAM_DETAILS';
 
 const api = axios.create({
-  baseURL: 'https://tame-pink-chimpanzee-slip.cyclic.app/api',
+  baseURL: 'https://tame-pink-chimpanzee-slip.cyclic.app/',
 });
 // Action creators
 export const fetchUsers = (filters) => async (dispatch) => {
