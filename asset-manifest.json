@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/heli-frontend/static/js/main.c7f24c32.js",
+    "main.js": "/heli-frontend/static/js/main.832f458e.js",
     "index.html": "/heli-frontend/index.html",
-    "main.c7f24c32.js.map": "/heli-frontend/static/js/main.c7f24c32.js.map"
+    "main.832f458e.js.map": "/heli-frontend/static/js/main.832f458e.js.map"
   },
   "entrypoints": [
-    "static/js/main.c7f24c32.js"
+    "static/js/main.832f458e.js"
   ]
 }
